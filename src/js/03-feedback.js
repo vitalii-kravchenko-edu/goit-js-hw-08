@@ -19,6 +19,10 @@ function saveInput () {
 function onSubmit(e) {
   e.preventDefault();
   saveInput();
+  if (!(data.email && data.message)) {
+    alert("Please fill all fields!");
+    return;
+  }
   console.log(data);
   localStorage.clear();
   form.reset();
